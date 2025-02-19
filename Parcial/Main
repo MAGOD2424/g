@@ -1,0 +1,19 @@
+package Parcial;
+import Parcial.Vehiculo;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            Autonomia sistema = new Autonomia();
+            
+            sistema.agregarVehiculo("Automovil", 1200, 50, 1600);
+            sistema.agregarVehiculo("Moto", 200, 15, 250);
+            
+            sistema.autonomiaAutomoviles("Automovil", 1600, 1200, 50);
+            sistema.autonomiaMotos("Moto", 250, 200, 15);
+            
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}

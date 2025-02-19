@@ -1,0 +1,39 @@
+package Parcial;
+
+public class Vehiculo{
+    private String tipoVehiculo;
+    private int peso;
+    private int tamanoTanque
+    private int ciliindraje;
+
+    public  int getCilindraje(){
+        return cilindraje;
+    }
+    public void setCilindraje(int cilindraje){
+        this.cilindraje = cilindraje;
+    }
+    public int getPeso(){
+        return peso;
+    }
+    public  void setPeso(int peso){
+        this.peso = peso;
+    }
+    public int getTamanoTanque(){
+        return tamanoTanque;
+    }
+    public void setTamanoTanque(int tamanoTanque){
+        this.tamanoTanque = tamanoTanque;
+    }
+    public String getTipoVehiculo(){
+        return tipoVehiculo;
+    }
+    public void setTipoVehiculo(String tipoVehiculo){
+        this.tipoVehiculo = tipoVehiculo;
+    }
+    public Vehiculo(int cilindraje, int peso, int tamanoTanque){
+        this.cilindraje = cilindraje;
+        this.peso = peso;
+        this.tamanoTanque = tamanoTanque;
+        this.tipoVehiculo = tipoVehiculo;
+    }
+}

@@ -1,0 +1,46 @@
+package Parcial;
+import Parcial.Vehiculo;
+
+import java.util.HashMap;
+
+public class Autonomia {
+    private HashMap<Integer, Vehiculo> vehiculos ;
+    
+    public Autonomia() {
+        this.vehiculos = new HashMap<>();
+    }
+    public void agregarVehiculo(String tipoVehiculo, int peso, int tamanoTanque, int cilindraje) throws Exception{
+        if(peso<= 0 ){
+            throw new Exception("El peso debe ser mayor a 0");
+        }
+        else if(tamanoTanque <= 0){
+            throw new Exception("El tamaño del tanque debe ser mayor a 0");
+        }
+        else if(cilindraje <= 0){
+            throw new Exception("El cilindraje debe ser mayor a 0");
+        }
+        else{
+            Vehiculo vehiculo = new Vehiculo(tipoVehiculo, peso, tamanoTanque, cilindraje);
+            vehiculos.put(tipoVehiculo, vehiculo); }
+    
+    }
+    public void autonomiaAutomoviles(String tipoVehiculo, int cilindraje, int peso, int tamanoTanque){
+        if(tipoVehiculo.equals("Automovil")){
+            int autonomia = (15*10**4 / (cilindraje + peso) * tamanoTanque);
+            System.out.println("La autonomia del automovil es de: " + autonomia);
+        }
+        else{
+            System.out.println("El vehiculo no es un automovil");
+        }
+    }
+    public void autonomiaMotos(String tipoVehiculo, int cilindraje, int peso, int tamanoTanque){
+        if(tipoVehiculo.equals("Moto")){
+            int autonomia = (8*10**4/ (cilindraje + 2*peso) * tamanoTanque);
+            System.out.println("La autonomia de la moto es de: " + autonomia);
+        }
+        else{
+            System.out.println("El vehiculo no es una moto");
+        }
+        
+    }
+}
